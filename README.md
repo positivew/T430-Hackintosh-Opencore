@@ -6,8 +6,6 @@
 [![10.15](https://img.shields.io/badge/macOS-10.15-9cf.svg)]()
 [![11](https://img.shields.io/badge/macOS-11-red.svg)]()
 [![12](https://img.shields.io/badge/macOS-12-blueviolet.svg)]()
-[![13](https://img.shields.io/badge/macOS-13-yellow.svg)]()
-[![14](https://img.shields.io/badge/macOS-14-orange.svg)]()
 [![download](https://img.shields.io/badge/Download-latest-success.svg)](https://github.com/jozews321/T430-Hackintosh-Opencore/releases/latest)
 <img align="left" src="/resources/T430-new.png" alt="Lenovo Thinkpad T430" width="300">
 <img align="right" src="/resources/homepage.png" alt="Opencore" width="200">
@@ -44,15 +42,15 @@ Do a pull request to add more Hardware configs to this list
 | Component           | Details                                       |
 | ------------------: | :-------------------------------------------- |
 | Model               | Lenovo ThinkPad T430                          |
-| BIOS Version        | 2.77, unlocked with 1vyRain                   |
-| Processor           | Intel Core i7 3610QM                          |
-| Memory              | 16GB DDR3 1600MHz in Dual-Channel             |
-| SSD                 | Intel 520 Series SSD 180GB                    |
+| BIOS Version        | 2.82                   |
+| Processor           | Intel Core i5 3320M                          |
+| Memory              | 8GB DDR3 2133MHz in Dual-Channel             |
+| SSD                 | SSD 120GB                    |
 | Graphics            | Intel HD Graphics 4000                        |
-| Display             | 15.6" 1600x900                                |
+| Display             | 14.0" 1600x900                                |
 | Audio               | Realtek ALC269VC                              |
 | Ethernet            | Intel 82579LM Gigabit Network                 |
-| WIFI                | Intel Dual Band Wireless-AC 7260              |
+| WIFI                | Intel Centrino Advanced-N 6235              |
 | Bluetooth           | Integrated Broadcom BCM20702 Bluetooth 4.2    |
   
 </details>
@@ -69,7 +67,7 @@ Download the latest release of the EFI
 <summary><strong>BIOS Settings</strong></summary>
 
 ### BIOS Settings
-Latest BIOS Version: `2.77` stock or ivyrain
+Latest BIOS Version: `2.82` stock
 
 **CONFIG TAB**
 
@@ -159,23 +157,16 @@ Now it's time to generate the Serial, MLB, UUID and ROM to the config.plist (you
   <br /> <br /> 
 - Choose 3 to generate some new serials
   <br /> <br /> 
-- Write MacBookPro10,1
+- Write MacBookPro12,1
   <br /> <br /> 
 - You will get something like this
   <br /> <br />  
 <img src="/resources/gensmbios.png" width="600">
-  <br /> <br /> 
-  
-- If you care about iServices you will need to try the generated serial in [Apple Coverage](https://checkcoverage.apple.com)
-  and try to get this message (use a VPN or TOR to get around the rate limits) 
-<img src="/resources/notvalidated.png" width="600">
-   <br /> <br /> 
-  
+  <br /> <br />   
 - Add the generated serials in the config.plist at /PlatformInfo/Generic
   (Serial to SystemSerialNumber, Board Serial to MLB, SmUUID to SystemUUID, AppleRom to ROM)
 <img src="/resources/configsmbios.png" width="600">
    <br /> <br /> 
-
 - Save and continue
 </details> 
 
@@ -218,21 +209,6 @@ If everything went right, now you would be able to control the brightness and en
 Follow this guide(Don't skip or your cpu will be locked at minimum or base clock and everything will be very slow):
 https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#sandy-and-ivy-bridge-power-management
 
-	
-</details> 
-
-<details>
-<summary><strong>Disable verbose boot</strong></summary>
-<br /> 
-If you managed to boot without any issues you can disable the verbose boot to get a clean boot experience 
-
-- Open the config.plist
-
-- Go to NVRAM/Add/7C436110-AB2A-4BBB-A880-FE41995C9F82
-	
-- Find boot-args and delete  `-v`
-	
-- Reboot
 	
 </details> 
 
