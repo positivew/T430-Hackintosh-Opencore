@@ -62,7 +62,7 @@ The provided ACPI tables in this OC EFI folder are made using a DSDT-less method
 <summary><strong>Getting the EFI ready</strong></summary>
 <br />
 
-Download the [latest release](https://github.com/positivew/T430-Hackintosh-Opencore/releases/latest) of the EFI.
+Download the [latest release](https://github.com/positivew/T430-Hackintosh-Opencore/releases/latest), extract it and set aside the `EFI` folder within.
 	
 </details>
 <details>
@@ -111,7 +111,7 @@ Latest BIOS Version: `2.82` stock
 ### Creating the USB installer 
 In this step we will create macOS installation media.
 
-Go to [OpenCore Guide - Creating the USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) where you can find the step by step instructions to create the installation media with your respective OS. You should end up with a USB drive that has been formatted to FAT32 and contains a folder called `com.apple.recovery.boot` with a .chunklist and a .dmg file in it.
+Go to [OpenCore Guide - Creating the USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) where you can find the step by step instructions to create the installation media with your respective OS. You should end up with a USB drive that has been formatted to FAT32 and contains a folder called `com.apple.recovery.boot` with a `.chunklist` and a `.dmg` file in it.
 </details>
 
 <details>
